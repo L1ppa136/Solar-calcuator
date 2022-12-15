@@ -81,15 +81,15 @@ const months = [
     }
 ];
 ```
-8. ***Határozzuk meg a `DC Array Output` értékét havi bontásban és rendüzzük a hónapokat `DC Array Output` szerint növekvő sorrendbe!
-9. ***Határozzuk meg a `DC Array Output` értékét havi bontásban és rendüzzük a hónapokat `DC Array Output` szerint csökkenő sorrendbe!
+8. ***Határozzuk meg a `DC Array Output` értékét havi bontásban (havi összeg) és rendüzzük a hónapokat e összeg szerint növekvő sorrendbe!
+9. ***Határozzuk meg a `DC Array Output` értékét havi bontásban (havi összeg) és rendüzzük a hónapokat e összeg szerint csökkenő sorrendbe!
 10. *Határozzuk meg napi szinten a `DC Array Output` értékét!
-11. **Rendezzük növekvő sorrendbe a api szintű `DC Array Output` statisztikát.
-12. **Rendezzük csökkenő sorrendbe a api szintű `DC Array Output` statisztikát.
+11. **Rendezzük növekvő sorrendbe a napi szintű `DC Array Output` statisztikát.
+12. **Rendezzük csökkenő sorrendbe a napi szintű `DC Array Output` statisztikát.
 13. *Melyik volt a legmelegebb nap (napi átlaghőmérséklet alapján)?
 14. *Melyik volt a leghidegebb nap (napi átlaghőmérséklet alapján)?
 15. *Melyik volt a legszelesebb nap (napi szélsebesség átlag alapján)?
 16. *Melyik volt a leg szélmentesebb nap (napi szélsebesség átlag alapján)?
 17. ****Keressük meg azokat a napokat (minimális számú napokat), amelyek az évi `DC Array Output` 80%-át adták!
 18. **Készítsünk statisztikát évi öszzegre az órára bontott `DC Array Output`-ra nézve!
-19. **********Határozzuk meg az évi szintű villamos termelést. Ennek az egysége Wh vagy kWh. Ezt a mennyiséget úgy tudjuk megkapni, hogy a `DC Array Output` értékét integráljuk az időtengely mentén (meddig volt elérhető az a villamos teljesítmény). Tételezzük fel hogy két adatpont között a villamos teljesítmény lineárisan változik (pl. reggel 5-kor még az érték 0 volt, reggel 6-kor pedig 10, akkor reggeli 5:30 kor az érték 5 volt.).
+19. **********Határozzuk meg az évi szintű villamos termelést. Ennek az egysége Wh vagy kWh. Ezt a mennyiséget úgy tudjuk megkapni, hogy a `DC Array Output` értékét integráljuk az időtengely mentén (meddig volt elérhető az a villamos teljesítmény). Tipp: tételezzük fel hogy két adatpont között a villamos teljesítmény lineárisan változik (pl. ha reggel 5-kor még a `DC Array Output` 0W volt, reggel 6-kor pedig 10W, akkor reggeli 5:30 kor az érték 5W volt).
