@@ -18,9 +18,9 @@ A `pvwatts_hourly_data.csv` file adatokat tartalmaz a 2022-es évre a napelem ka
 1. Olvassuk be a csv file tartalmát egy (server) oldalon futó javascript file-ba (index.js)
 2. Alakítsuk át a beolvasott file tartalmát a következő adatformátumra:
 ```javascript
-const days = [
+const hours = [
     {
-        'month': 1,
+        'Month': 1,
         'Day': 1,
         'Hour': 0,
         'Beam Irradiance': {
@@ -63,33 +63,34 @@ const days = [
 ];
 ```
 ## Feladatok
-1. *Határozzuk meg, hogy az adott év melyik napján volt a `DC Array Output` a legnagyobb? Melyik hónapban volt ez?
-2. *Határozzuk meg, hogy az adott év melyik napján volt  a `DC Array Output` a legkisebb? Melyik hónapban volt ez?
-3. **Határozzuk meg a `DC Array Output` értékét havi bontásban.
-4. *Határozzuk meg az adott évben  a `DC Array Output` összegét!
-5. *Határozzuk meg az adott évben `DC Array Output` átlagát!
-6. **Határozzuk meg havi szinten `DC Array Output` szórását (az éves átlaghoz képest)!
+1. *Határozzuk meg, hogy az adott év melyik **napján** volt a `DC Array Output` a legnagyobb? Melyik **hónapban** volt ez? (`DC Array Output` napi szintű összege alapján)
+2. *Határozzuk meg, hogy az adott év melyik **napján** volt  a `DC Array Output` a legkisebb? Melyik **hónapban** volt ez? (`DC Array Output` napi szintű összege alapján)
+3. ** Határozzuk meg a `DC Array Output` értékét **havi** bontásban. (Összegezzük a `DC Array Output` minden egyes hónapra)
+4. *Határozzuk meg az adott **évben**  a `DC Array Output` összegét!
+5. *Határozzuk meg az adott évben `DC Array Output` *havi* átlagát!
+6. ** Határozzuk meg a **havi** `DC Array Output` szórását! (adott hónap eltérése a havi átlaghoz képest)
 7. ***Készítsünk egy összetett adatstruktúrát a havi bontásra vonatkozó `DC Array Output`-ra:
 ```javascript
-const months = [
+const dcArrayOutputByMonths = {
+    'avg': 0
     {
-        'avg': 0
+        'month': 'January'
         'σ': 0
     },
     {
         ...
     }
-];
+};
 ```
-8. ***Határozzuk meg a `DC Array Output` értékét havi bontásban (havi összeg) és rendüzzük a hónapokat e összeg szerint növekvő sorrendbe!
-9. ***Határozzuk meg a `DC Array Output` értékét havi bontásban (havi összeg) és rendüzzük a hónapokat e összeg szerint csökkenő sorrendbe!
+8. ***Határozzuk meg a `DC Array Output` értékét havi bontásban (adott havi összeg) és rendüzzük a hónapokat e összeg szerint növekvő sorrendbe!
+9. ***Határozzuk meg a `DC Array Output` értékét havi bontásban (adott havi összeg) és rendüzzük a hónapokat e összeg szerint csökkenő sorrendbe!
 10. *Határozzuk meg napi szinten a `DC Array Output` értékét!
-11. **Rendezzük növekvő sorrendbe a napi szintű `DC Array Output` statisztikát.
-12. **Rendezzük csökkenő sorrendbe a napi szintű `DC Array Output` statisztikát.
-13. *Melyik volt a legmelegebb nap (napi átlaghőmérséklet alapján)?
-14. *Melyik volt a leghidegebb nap (napi átlaghőmérséklet alapján)?
+11. **Rendezzük növekvő sorrendbe a napi szintű `DC Array Output` értékeket.
+12. **Rendezzük csökkenő sorrendbe a napi szintű `DC Array Output` értékeket.
+13. *Melyik volt a legmelegebb nap (napi `ambient` átlaghőmérséklet alapján)?
+14. *Melyik volt a leghidegebb nap (napi `ambient` átlaghőmérséklet alapján)?
 15. *Melyik volt a legszelesebb nap (napi szélsebesség átlag alapján)?
 16. *Melyik volt a leg szélmentesebb nap (napi szélsebesség átlag alapján)?
 17. ****Keressük meg azokat a napokat (minimális számú napokat), amelyek az évi `DC Array Output` 80%-át adták!
-18. **Készítsünk statisztikát évi öszzegre az órára bontott `DC Array Output`-ra nézve!
+18. **Készítsünk statisztikát évi öszzegre órákra bontott `DC Array Output`-ra nézve! (összegezzük a `DC Array Output` mindig ugyanabban az órában)
 19. **********Határozzuk meg az évi szintű villamos termelést. Ennek az egysége Wh vagy kWh. Ezt a mennyiséget úgy tudjuk megkapni, hogy a `DC Array Output` értékét integráljuk az időtengely mentén (meddig volt elérhető az a villamos teljesítmény). Tipp: tételezzük fel hogy két adatpont között a villamos teljesítmény lineárisan változik (pl. ha reggel 5-kor még a `DC Array Output` 0W volt, reggel 6-kor pedig 10W, akkor reggeli 5:30 kor az érték 5W volt).
