@@ -1,4 +1,4 @@
-﻿"Month","Day","Hour","Beam Irradiance (W/m^2)","Diffuse Irradiance (W/m^2)","Ambient Temperature (C)","Wind Speed (m/s)","Albedo","Plane of Array Irradiance (W/m^2)","Cell Temperature (C)","DC Array Output (W)","AC System Output (W)"
+"Month","Day","Hour","Beam Irradiance (W/m^2)","Diffuse Irradiance (W/m^2)","Ambient Temperature (C)","Wind Speed (m/s)","Albedo","Plane of Array Irradiance (W/m^2)","Cell Temperature (C)","DC Array Output (W)","AC System Output (W)"
 "1","1","0","0","0","-7.1","1","0.2","0","-7.1","0","0"
 "1","1","1","0","0","-9.7","0","0.2","0","-9.7","0","0"
 "1","1","2","0","0","-11.4","1","0.2","0","-11.4","0","0"
